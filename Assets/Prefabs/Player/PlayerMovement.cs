@@ -17,15 +17,15 @@ public class PlayerMovement : MonoBehaviour {
         currentDirection = startingDirection;
     }
 
-
-    void Update() {
+    void FixedUpdate() {
         UpdateDirection();
         Move();
     }
 
     private void Move() {
         var movement = currentDirection * speed * Time.deltaTime;
-        playerBody.MovePosition(playerBody.transform.position + movement);
+        var pos = transform.position + movement;
+        playerBody.MovePosition(pos);
     }
   
     private void UpdateDirection() {
