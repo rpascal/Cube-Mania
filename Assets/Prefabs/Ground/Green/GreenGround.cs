@@ -6,6 +6,7 @@ public class GreenGround : BaseGround {
 
     protected override void CollisionPlayerProperties(PlayerProperties playerProperties) {
         playerProperties.SetColor(Color.red);
+        playerProperties.SetAttack(attack);
     }
 
 }

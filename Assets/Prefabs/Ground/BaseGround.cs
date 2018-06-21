@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BaseGround : MonoBehaviour {
+    public BaseAttack attack;
+
     protected abstract void CollisionPlayerProperties(PlayerProperties playerProperties);
 
     private void OnCollisionEnter(Collision collision) {
